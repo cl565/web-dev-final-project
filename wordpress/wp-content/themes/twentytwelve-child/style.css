@@ -1,5 +1,5 @@
 /*
-Theme Name:     CJL Final Project Theme
+Theme Name:     twenty twelve child theme
 Description:    Child theme for the Twenty Twelve theme
 Author:         Charlotte
 Template:       twentytwelve                             
@@ -8,6 +8,9 @@ Version:        0.1.0
 
 @import url("../twentytwelve/style.css");
 
-body {
-	background-color: orange;
+#masthead {
+ background: #122C81;
+ margin-left: -40px;
+ margin-top: -24px;
+ width: 1040px;
 }

@@ -1,0 +1,13 @@
+/*
+Theme Name:     CJL Final Project Theme
+Description:    Child theme for the Twenty Twelve theme
+Author:         Charlotte
+Template:       twentytwelve                             
+Version:        0.1.0
+*/
+
+@import url("../twentytwelve/style.css");
+
+body {
+	background-color: orange;
+}

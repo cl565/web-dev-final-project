@@ -8,9 +8,3 @@ Version:        0.1.0
 
 @import url("../twentytwelve/style.css");
 
-#masthead {
- background: #122C81;
- margin-left: -40px;
- margin-top: -24px;
- width: 1040px;
-}

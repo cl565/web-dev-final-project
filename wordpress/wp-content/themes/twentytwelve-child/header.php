@@ -49,6 +49,7 @@
 			<a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'twentytwelve' ); ?>"><?php _e( 'Skip to content', 'twentytwelve' ); ?></a>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
 		</nav><!-- #site-navigation -->
+		<!--Moved around "site-navigation" to place it underneath the header image -->
 	</header><!-- #masthead -->
 
 	<div id="main" class="wrapper">

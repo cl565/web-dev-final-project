@@ -17,3 +17,7 @@ Version:        0.1.0
 #page {
 	background-color: #FCEFD7;
 }
+
+.site-header {
+	text-align: center;
+}

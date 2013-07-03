@@ -21,3 +21,7 @@ Version:        0.1.0
 .site-header {
 	text-align: center;
 }
+
+.main-navigation {
+	margin: 0 auto;
+}

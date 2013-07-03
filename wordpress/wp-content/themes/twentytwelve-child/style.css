@@ -13,9 +13,9 @@ Version:        0.1.0
 	text-align: center;
 
 }
-
+/* background color? #FCEFD7*/
 #page {
-	background-color: #FCEFD7;
+	background-color: white;
 }
 
 .site-header {

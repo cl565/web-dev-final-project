@@ -26,9 +26,17 @@ ul#menu-my-menu.nav-menu {
 	text-align: center;
 }
 
-
-
-img {
-	border: 50px black;
+.main-navigation li a {
+ color: black;
+ font-size: 20px;
 }
+
+/* Change hover text colour */
+.main-navigation li a:hover {
+ color: #901818;
+ font-weight: bold;
+}
+
+
+
 

@@ -8,15 +8,9 @@ Version:        0.1.0
 
 @import url("../twentytwelve/style.css");
 
-#site-navigation {
-	background-color: white;
-	text-align: center;
 
-}
-/* background color? #FCEFD7*/
-#page {
-	background-color: white;
-}
+/* background color? #FCEFD7 or #F5F1DE*/
+
 
 .site-header {
 	text-align: center;
@@ -25,6 +19,7 @@ Version:        0.1.0
 ul#menu-my-menu.nav-menu {
 	text-align: center;
 }
+
 
 .main-navigation li a {
  color: black;

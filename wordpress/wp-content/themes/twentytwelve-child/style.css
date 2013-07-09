@@ -9,27 +9,26 @@ Version:        0.1.0
 @import url("../twentytwelve/style.css");
 
 
-/* background color? #FCEFD7 or #F5F1DE*/
-
+/* CSS styling for header... not necessary as long as I continue to use drop down menu plug in!
 
 .site-header {
 	text-align: center;
 }
-
 ul#menu-my-menu.nav-menu {
 	text-align: center;
 }
-
-
 .main-navigation li a {
  color: black;
  font-size: 20px;
 }
-
-/* Change hover text colour */
 .main-navigation li a:hover {
  color: #901818;
  font-weight: bold;
+} */
+
+a {
+	color: black;
+	font-family: sans-serif;
 }
 
 a:hover {
@@ -43,14 +42,6 @@ font-size: 20px;
 font-weight: bold;
 }
 
-a {
-	color: black;
-	font-family: sans-serif;
-}
 
-div.dropdown-horizontal-container.dm-align-center.clearfix {
-	color: #901818;
- 	font-weight: bold;
 
-}
 

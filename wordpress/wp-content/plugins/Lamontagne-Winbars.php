@@ -10,7 +10,7 @@ Author URI: http://stateofthevinedc.com
 
 add_action( 'init', 'rl_create_post_type' );
 
-function rl_create_post_type() {
+function cl_create_post_type() {
 	$labels = array(
 		'name' 							=> __( 'Wine Bars', 'wineBars' ),
 		'singular_name' 				=> __( 'Wine Bar', 'wineBars' ),

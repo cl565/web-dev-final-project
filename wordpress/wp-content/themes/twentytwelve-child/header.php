@@ -45,7 +45,8 @@
 		<?php endif; ?>
 <br>
 <br>
-<?php shailan_dropdown_menu( array( 'menu' => 'categories' ) ); ?>
+
+<?php shailan_dropdown_menu( ); ?>
 
 		<!--<nav id="site-navigation" class="main-navigation" role="navigation">
 			<h3 class="menu-toggle"><?php _e( 'Menu', 'twentytwelve' ); ?></h3>

@@ -12,15 +12,15 @@ add_action( 'init', 'cl_create_post_type' );
 
 function cl_create_post_type() {
 	$labels = array(
-		'name' 							=> __( 'Wine Bars', 'wineBars' ),
-		'singular_name' 				=> __( 'Wine Bar', 'wineBars' ),
-		'search_items'					=> __( 'Search Wine Bars', 'wineBars' ),
-		'all_items'						=> __( 'All Wine Bars', 'wineBars' ),
-		'edit_item'						=> __( 'Edit Wine Bars', 'wineBars' ),
-		'update_item' 					=> __( 'Update Wine Bars', 'wineBars' ),
-		'add_new_item' 					=> __( 'Add New Wine Bars', 'wineBars' ),
-		'new_item_name' 				=> __( 'New Wine Bar', 'wineBars' ),
-		'menu_name' 					=> __( 'Wine Bars', 'wineBars' ),
+		'name' 							=> __( 'Wine Bars', 'winebars' ),
+		'singular_name' 				=> __( 'Wine Bar', 'winebars' ),
+		'search_items'					=> __( 'Search Wine Bars', 'winebars' ),
+		'all_items'						=> __( 'All Wine Bars', 'winebars' ),
+		'edit_item'						=> __( 'Edit Wine Bars', 'winebars' ),
+		'update_item' 					=> __( 'Update Wine Bars', 'winebars' ),
+		'add_new_item' 					=> __( 'Add New Wine Bars', 'winebars' ),
+		'new_item_name' 				=> __( 'New Wine Bar', 'winebars' ),
+		'menu_name' 					=> __( 'Wine Bars', 'winebars' ),
 	);
 	
 	$args = array (
@@ -28,38 +28,38 @@ function cl_create_post_type() {
 		'public' 		=> true,
 		'menu_position' => 20,
 		'has_archive' 	=> true,
-		'rewrite'		=> array( 'slug' => 'books' ),
+		'rewrite'		=> array( 'slug' => 'winebars' ),
 		'supports' 		=> array( 'title', 'thumbnail', 'editor' )
 	);
-	register_post_type( 'cl_wineBars', $args );
+	register_post_type( 'cl_winebars', $args );
 }
 
-/* Hook in to the init action and call cl_create_book_taxonomies when it fires. */
-add_action( 'init', 'cl_create_book_taxonomies', 0 );
+add_action( 'init', 'cl_create_winebars_taxonomies', 0 );
 
-function cl_create_book_taxonomies() {
+function cl_create_winebars_taxonomies() {
 	// Add new taxonomy, keep it non-hierarchical (like tags)
 	$labels = array(
-		'name' 							=> __( 'Neighborhoods', 'wineBars' ),
-		'singular_name' 				=> __( 'Neighborhood', 'wineBars' ),
-		'search_items' 					=> __( 'Search Neighborhoods', 'wineBars' ),
-		'all_items' 					=> __( 'All Neighborhoods', 'wineBars' ),
-		'edit_item' 					=> __( 'Edit Neighborhood', 'wineBars' ), 
-		'update_item' 					=> __( 'Update Neighborhood', 'wineBars' ),
-		'add_new_item' 					=> __( 'Add New Neighborhood', 'wineBars' ),
-		'new_item_name' 				=> __( 'New Neighborhood Name', 'wineBars' ),
-		'separate_items_with_commas' 	=> __( 'Separate neighborhoods with commas', 'wineBars' ),
-		'choose_from_most_used' 		=> __( 'Choose from the most used neighborhoods', 'wineBars' ),
-		'menu_name' 					=> __( 'Neighborhoods', 'wineBars' ),
+		'name' 							=> __( 'Neighborhoods', 'winebars' ),
+		'singular_name' 				=> __( 'Neighborhood', 'winebars' ),
+		'search_items' 					=> __( 'Search Neighborhoods', 'winebars' ),
+		'all_items' 					=> __( 'All Neighborhoods', 'winebars' ),
+		'edit_item' 					=> __( 'Edit Neighborhood', 'winebars' ), 
+		'update_item' 					=> __( 'Update Neighborhood', 'winebars' ),
+		'add_new_item' 					=> __( 'Add New Neighborhood', 'winebars' ),
+		'new_item_name' 				=> __( 'New Neighborhood Name', 'winebars' ),
+		'separate_items_with_commas' 	=> __( 'Separate neighborhoods with commas', 'winebars' ),
+		'choose_from_most_used' 		=> __( 'Choose from the most used neighborhoods', 'winebars' ),
+		'menu_name' 					=> __( 'Neighborhoods', 'winebars' ),
 	); 	
 		
-	register_taxonomy( 'wineBar-neighborhood', array( 'cl_wineBars' ), array(
+	register_taxonomy( 'wine-bars-neighborhood', array( 'cl_winebars' ), array(
 		'hierarchical' 		=> false,
 		'labels' 			=> $labels,
 		'show_ui' 			=> true,
 		'show_admin_column' => true,
 		'query_var' 		=> true,
-		'rewrite' 			=> array( 'slug' => 'wineBar-neighborhood' ),
+		'rewrite' 			=> array( 'slug' => 'wine-bars-neighborhood' ),
 	));
 }
+
 ?>

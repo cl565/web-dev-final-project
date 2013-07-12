@@ -61,6 +61,16 @@ function cl_create_winebars_taxonomies() {
 		'rewrite' 			=> array( 'slug' => 'wine-bars-neighborhood' ),
 	));
 }
+add_action( 'admin_init', 'my_admin' );
+
+function my_admin() {
+    add_meta_box( 'wine_bar_information_meta_box',
+        'Wine Bar Information',
+        'display_wine_bar_information_meta_box',
+        'wine_bars', 'normal', 'high'
+    );
+}
+
 /* Fire our meta box setup function on the editor screen. */
 add_action( 'load-post.php', 'cl_post_meta_boxes_setup' );
 add_action( 'load-post-new.php', 'cl_post_meta_boxes_setup' );
@@ -93,7 +103,7 @@ function cl_winebars_meta_box( $object, $box ) { ?>
 
 	<?php wp_nonce_field( basename( __FILE__ ), 'cl_winebars_nonce' ); ?>
 
-	<p class="howto"><label for="cl-winebars"><?php _e( "And a little bit more", 'example' ); ?></label></p>
+	<p class="howto"><label for="cl-winebars"><?php _e( "Wine Bar Info", 'example' ); ?></label></p>
 	<p><input class="widefat" type="text" name="cl-winebars" id="cl-winebars" value="<?php echo esc_attr( get_post_meta( $object->ID, 'rl_pages', true ) ); ?>" size="30" /></p>
 <?php }
 

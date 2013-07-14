@@ -99,7 +99,7 @@ function cl_add_post_meta_boxes() {
 }
 
 /* Display the post meta box. */
-function cl_winebars_meta_box( $object, $box ) { ?>
+function cl_hours_meta_box( $object, $box ) { ?>
 
 	<?php wp_nonce_field( basename( __FILE__ ), 'cl_winebars_nonce' ); ?>
 

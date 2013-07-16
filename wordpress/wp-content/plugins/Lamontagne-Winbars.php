@@ -61,8 +61,34 @@ function cl_create_winebars_taxonomies() {
 		'rewrite' 			=> array( 'slug' => 'wine-bars-neighborhood' ),
 	));
 }
-/*display taxonomy in post*/
 
+function cl_create_winebars_taxonomies() {
+	// Add new taxonomy, keep it non-hierarchical (like tags)
+	$labels = array(
+		'name' 							=> __( 'Type', 'winebars' ),
+		'singular_name' 				=> __( 'Type', 'winebars' ),
+		'search_items' 					=> __( 'Search Type', 'winebars' ),
+		'all_items' 					=> __( 'All Type', 'winebars' ),
+		'edit_item' 					=> __( 'Edit Type', 'winebars' ), 
+		'update_item' 					=> __( 'Update Type', 'winebars' ),
+		'add_new_item' 					=> __( 'Add New Type', 'winebars' ),
+		'new_item_name' 				=> __( 'New Type Name', 'winebars' ),
+		'separate_items_with_commas' 	=> __( 'Separate Type with commas', 'winebars' ),
+		'choose_from_most_used' 		=> __( 'Choose from the most used Type', 'winebars' ),
+		'menu_name' 					=> __( 'Type', 'winebars' ),
+	); 	
+		
+	register_taxonomy( 'wine-bars-Type', array( 'cl_winebars' ), array(
+		'hierarchical' 		=> false,
+		'labels' 			=> $labels,
+		'show_ui' 			=> true,
+		'show_admin_column' => true,
+		'query_var' 		=> true,
+		'rewrite' 			=> array( 'slug' => 'wine-bars-Type' ),
+	));
+}
+
+/* METABOXES*/
 
 add_action( 'admin_init', 'my_admin' );
 

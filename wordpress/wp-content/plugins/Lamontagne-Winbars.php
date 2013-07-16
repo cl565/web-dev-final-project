@@ -52,7 +52,15 @@ function cl_create_winebars_taxonomies() {
 		'menu_name' 					=> __( 'Neighborhoods', 'winebars' ),
 	); 	
 
-	array(
+register_taxonomy( 'wine-bars-neighborhood', array( 'cl_winebars' ), array(
+		'hierarchical' 		=> true,
+		'labels' 			=> $labels,
+		'show_ui' 			=> true,
+		'show_admin_column' => true,
+		'query_var' 		=> true,
+		'rewrite' 			=> array( 'slug' => 'wine-bars-neighborhood' ),
+	));
+	$labels = array(
 		'name' 							=> __( 'Type', 'winebars' ),
 		'singular_name' 				=> __( 'Type', 'winebars' ),
 		'search_items' 					=> __( 'Search type', 'winebars' ),
@@ -66,17 +74,10 @@ function cl_create_winebars_taxonomies() {
 		'menu_name' 					=> __( 'type', 'winebars' ),
 	); 
 		
-	register_taxonomy( 'wine-bars-neighborhood', array( 'cl_winebars' ), array(
-		'hierarchical' 		=> false,
-		'labels' 			=> $labels,
-		'show_ui' 			=> true,
-		'show_admin_column' => true,
-		'query_var' 		=> true,
-		'rewrite' 			=> array( 'slug' => 'wine-bars-neighborhood' ),
-	));
+	
 		
 	register_taxonomy( 'wine-bars-type', array( 'cl_winebars' ), array(
-		'hierarchical' 		=> false,
+		'hierarchical' 		=> true,
 		'labels' 			=> $labels,
 		'show_ui' 			=> true,
 		'show_admin_column' => true,

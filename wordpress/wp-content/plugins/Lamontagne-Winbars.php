@@ -51,6 +51,20 @@ function cl_create_winebars_taxonomies() {
 		'choose_from_most_used' 		=> __( 'Choose from the most used neighborhoods', 'winebars' ),
 		'menu_name' 					=> __( 'Neighborhoods', 'winebars' ),
 	); 	
+
+	array(
+		'name' 							=> __( 'type', 'winebars' ),
+		'singular_name' 				=> __( 'type', 'winebars' ),
+		'search_items' 					=> __( 'Search type', 'winebars' ),
+		'all_items' 					=> __( 'All type', 'winebars' ),
+		'edit_item' 					=> __( 'Edit type', 'winebars' ), 
+		'update_item' 					=> __( 'Update type', 'winebars' ),
+		'add_new_item' 					=> __( 'Add New type', 'winebars' ),
+		'new_item_name' 				=> __( 'New type Name', 'winebars' ),
+		'separate_items_with_commas' 	=> __( 'Separate type with commas', 'winebars' ),
+		'choose_from_most_used' 		=> __( 'Choose from the most used type', 'winebars' ),
+		'menu_name' 					=> __( 'type', 'winebars' ),
+	); 
 		
 	register_taxonomy( 'wine-bars-neighborhood', array( 'cl_winebars' ), array(
 		'hierarchical' 		=> false,
@@ -60,31 +74,14 @@ function cl_create_winebars_taxonomies() {
 		'query_var' 		=> true,
 		'rewrite' 			=> array( 'slug' => 'wine-bars-neighborhood' ),
 	));
-}
-
-function cl_create_winebars_taxonomies() {
-	// Add new taxonomy, keep it non-hierarchical (like tags)
-	$labels = array(
-		'name' 							=> __( 'Type', 'winebars' ),
-		'singular_name' 				=> __( 'Type', 'winebars' ),
-		'search_items' 					=> __( 'Search Type', 'winebars' ),
-		'all_items' 					=> __( 'All Type', 'winebars' ),
-		'edit_item' 					=> __( 'Edit Type', 'winebars' ), 
-		'update_item' 					=> __( 'Update Type', 'winebars' ),
-		'add_new_item' 					=> __( 'Add New Type', 'winebars' ),
-		'new_item_name' 				=> __( 'New Type Name', 'winebars' ),
-		'separate_items_with_commas' 	=> __( 'Separate Type with commas', 'winebars' ),
-		'choose_from_most_used' 		=> __( 'Choose from the most used Type', 'winebars' ),
-		'menu_name' 					=> __( 'Type', 'winebars' ),
-	); 	
 		
-	register_taxonomy( 'wine-bars-Type', array( 'cl_winebars' ), array(
+	register_taxonomy( 'wine-bars-type', array( 'cl_winebars' ), array(
 		'hierarchical' 		=> false,
 		'labels' 			=> $labels,
 		'show_ui' 			=> true,
 		'show_admin_column' => true,
 		'query_var' 		=> true,
-		'rewrite' 			=> array( 'slug' => 'wine-bars-Type' ),
+		'rewrite' 			=> array( 'slug' => 'wine-bars-type' ),
 	));
 }
 

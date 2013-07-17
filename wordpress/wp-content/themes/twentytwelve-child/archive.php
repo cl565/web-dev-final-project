@@ -64,9 +64,10 @@ get_header(); ?>
 			if($post_type)
 	   		$post_type = $post_type;
 			else
-	    	$post_type = array('post','cl_winebars');
+	    	$post_type = array('cl_winebars', 'post');
     		$query->set('post_type',$post_type);
 			return $query;
+			?>
     }
 }
 

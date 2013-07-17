@@ -29,7 +29,7 @@ function cl_create_post_type() {
 		'menu_position' => 20,
 		'has_archive' 	=> true,
 		'rewrite'		=> array( 'slug' => 'winebars' ),
-		'supports' 		=> array( 'title', 'thumbnail', 'editor' )
+		'supports' 		=> array( 'title', 'thumbnail', 'editor')
 	);
 	register_post_type( 'cl_winebars', $args );
 }
@@ -87,5 +87,4 @@ register_taxonomy( 'wine-bars-neighborhood', array( 'cl_winebars' ), array(
 	));
 }
 
-
-
+?>

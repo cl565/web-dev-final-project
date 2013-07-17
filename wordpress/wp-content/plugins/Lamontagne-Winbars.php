@@ -29,7 +29,8 @@ function cl_create_post_type() {
 		'menu_position' => 20,
 		'has_archive' 	=> true,
 		'rewrite'		=> array( 'slug' => 'winebars' ),
-		'supports' 		=> array( 'title', 'thumbnail', 'editor' )
+		'supports' 		=> array( 'title', 'thumbnail', 'editor'), 
+		'taxonomies' 	=> array( 'category')
 	);
 	register_post_type( 'cl_winebars', $args );
 }
@@ -91,7 +92,7 @@ register_taxonomy( 'wine-bars-neighborhood', array( 'cl_winebars' ), array(
 add_filter( 'pre_get_posts', 'my_get_posts' );
 function my_get_posts( $query ) {
 if ( is_home() && false == $query->query_vars['suppress_filters'] )
-$query->set( 'post_type', array( 'cl_winebars', 'post', 'page', 'album', 'movie', 'quote', 'attachment' ) );
+$query->set( 'post_type', array( 'cl_winebars' ) );
 return $query;
 }
 

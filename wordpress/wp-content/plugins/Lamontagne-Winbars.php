@@ -35,9 +35,10 @@ function cl_create_post_type() {
 	register_post_type( 'cl_winebars', $args );
 }
 
-add_action( 'init', 'cl_create_winebars_taxonomies', 0 );
+add_action( 'init', 'cl_create_winebars_neighborhoods_taxonomies', 0 );
+add_action( 'init', 'cl_create_winebars_types_taxonomies', 0 );
 
-function cl_create_winebars_taxonomies() {
+function cl_create_winebars_neighborhoods_taxonomies() {
 	// Add new taxonomy, keep it non-hierarchical (like tags)
 	$labels = array(
 		'name' 							=> __( 'Neighborhoods', 'winebars' ),
@@ -53,7 +54,7 @@ function cl_create_winebars_taxonomies() {
 		'menu_name' 					=> __( 'Neighborhoods', 'winebars' ),
 	); 	
 
-register_taxonomy( 'wine-bars-neighborhood', array( 'cl_winebars' ), array(
+	register_taxonomy( 'wine-bars-neighborhood', array( 'cl_winebars' ), array(
 		'hierarchical' 		=> true,
 		'labels' 			=> $labels,
 		'show_ui' 			=> true,
@@ -61,6 +62,11 @@ register_taxonomy( 'wine-bars-neighborhood', array( 'cl_winebars' ), array(
 		'query_var' 		=> true,
 		'rewrite' 			=> array( 'slug' => 'wine-bars-neighborhood' ),
 	));
+
+}
+
+function cl_create_winebars_types_taxonomies() {
+	// Add new taxonomy, keep it non-hierarchical (like tags)
 
 	$labels = array(
 		'name' 							=> __( 'Type', 'winebars' ),

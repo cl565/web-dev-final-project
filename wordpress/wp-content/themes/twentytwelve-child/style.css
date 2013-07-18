@@ -45,6 +45,11 @@ font-size: 20px;
 font-weight: bold;
 }
 
+h3.widget-title {
+	color: #901818;
+	font-family: serif;
+	font-size: 15px;
+ }
 
 
 

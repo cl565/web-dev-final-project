@@ -71,6 +71,15 @@ get_header(); ?>
     }
 }
 
+<?php 
+function filter_search($query) {
+    if ($query->is_search) {
+	$query->set('post_type', array('post', 'cl_winebars'));
+    };
+    return $query;
+};
+?>
+
 		</div><!-- #content -->
 	</section><!-- #primary -->
 

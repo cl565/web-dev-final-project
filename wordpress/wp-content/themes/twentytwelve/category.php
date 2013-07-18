@@ -44,14 +44,6 @@ get_header(); ?>
 			<?php get_template_part( 'content', 'none' ); ?>
 		<?php endif; ?>
 
-<?php function filter_search($query) {
-    if ($query->is_search) {
-	$query->set('post_type', array('post', 'cl_winebars'));
-    };
-    return $query;
-};
-?>
-add_filter('pre_get_posts', 'filter_search');
 
 		</div><!-- #content -->
 	</section><!-- #primary -->

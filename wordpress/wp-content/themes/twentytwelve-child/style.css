@@ -24,6 +24,9 @@ ul#menu-my-menu.nav-menu {
  font-weight: bold;
 } */
 
+ul#menu-my-menu.nav-menu {
+	text-align: center;
+}
 .site-header {
 	text-align: center;
 }

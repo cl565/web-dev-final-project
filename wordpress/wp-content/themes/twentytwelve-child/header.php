@@ -49,10 +49,10 @@
 <?php // SETUP
 $args =array(
     'menu' => 'mymenu',           // Menu type pages | categories | menuID | menu name
-  	    // IDs of pages to be excluded
     'login' => false,         // Display login/logout link?
     'admin' => false,            // Show site admin link?
     'vertical' => false,     // Display vertical?
+    'horizontal' => true,
     'home' => true,              // Display home link?
     'align' => 'center',          // Align left | center | right
     'width' => '500'         // Width of menu
